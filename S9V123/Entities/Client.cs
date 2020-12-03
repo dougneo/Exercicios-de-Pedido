@@ -18,5 +18,14 @@ namespace S9V123.Entities
             BirthDate = birthdate;
         }
 
-    }	
+        public override string ToString()
+        {
+            return Name +
+                " (" +
+                BirthDate.ToString("dd/MM/yyyy") +
+                ") - " +
+                Email;
+        }
+
+    }
 }

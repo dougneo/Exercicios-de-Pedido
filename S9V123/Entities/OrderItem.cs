@@ -1,4 +1,8 @@
-﻿namespace S9V123.Entities
+﻿using System.Globalization;
+using System;
+
+
+namespace S9V123.Entities
 {
     class OrderItem
     {
@@ -20,6 +24,17 @@
         public double SubTotal()
         {
             return Quantity * Price;
+        }
+
+        public override string ToString()
+        {
+        return Product.Name +
+            ", $" +
+            Price.ToString("F2", CultureInfo.InvariantCulture) +
+            ", Quantity: " +
+            Quantity +
+          ", Subtotal: $" +
+          SubTotal().ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }

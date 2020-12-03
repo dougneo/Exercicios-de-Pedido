@@ -35,7 +35,7 @@ namespace S9V123
 
             for (int i = 1; i <= n; i++)
             {
-                Console.WriteLine($"Enter #{0} item data:", i);
+                Console.WriteLine($"Enter #{i} item data:");
                 Console.Write("Product name: ");
                 string productName = Console.ReadLine();
                 Console.Write("Product price: ");
@@ -49,6 +49,10 @@ namespace S9V123
 
                 order.AddItem(items);
             }
+
+            Console.WriteLine();
+            Console.WriteLine("ORDER SUMMARY:");
+            Console.WriteLine(order);
 
         }
     }
